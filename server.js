@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 
 // Set public folder as root
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 // Provide access to node_modules folder
 app.use('/scripts', express.static(`${__dirname}/node_modules/`));
